@@ -1,0 +1,61 @@
+.hero:global(.grid) {
+  margin-top: 14px;
+}
+
+.heroBody {
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.heroBody h1 {
+  max-width: 46rem;
+  margin-bottom: 0;
+}
+
+.heroImg img {
+  max-height: 110px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.heroBody > div {
+  display: inline-block;
+  text-align: center;
+  /*margin-left: 70px;*/
+}
+.heroBody p {
+  font-size: 18px;
+}
+.hero {
+  background-color: #fff;
+  margin-top: 35px;
+  margin-bottom: 14px;
+}
+
+.faq {
+  background-color: #fff;
+  margin-top: 14px;
+  margin-bottom: 28px;
+  padding: 40px 20px 20px;
+}
+.faq h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.faqTitle {
+  position: relative;
+}
+.faqTitle h3 {
+  display: inline-block;
+  max-width: 93%;
+  margin-bottom: 0;
+}
+.faqTitle .plus {
+  color: #999;
+  font-size: 2em;
+  font-weight: 300;
+  position: absolute;
+  top: .4em;
+  right: .4em;
+
+}

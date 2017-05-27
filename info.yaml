@@ -1,0 +1,53 @@
+nomdusite: Maison Médicale Saint-Guidon
+tel: 02/527 97 90
+email: contact@mmsg.be
+adresse: |
+  Avenue Paul Janson 44,
+  1070 Anderlecht
+carte: https://goo.gl/maps/H7VVEMLE44m
+license: ©2017 - [mmsg.be](https://mmsg.be) - sous une license [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
+menu:
+  Accueil: /
+  Nouveautés: /nouveautes
+  Horaires: /horaires
+  Fonctionnement: /fonctionnement
+  Services: /services
+  Contact: /contact
+blocs:
+  horaires:
+    titre: Horaires
+    icone: clock
+    texte: |-
+      Du Lundi au Vendredi
+      De 9h00 à 12h30
+      De 14h00 à 18h00
+    lien: Horaires des services >
+  contact:
+    titre: Où sommes nous ?
+    icone: direction
+    texte: |-
+      [Avenue Paul Janson 44,
+      1070 Anderlecht](https://goo.gl/maps/H7VVEMLE44m)
+      [02/527 97 90](tel:025279790)
+      [contact@mmsg.be](mailto:contact@mmsg.be)
+    lien: Nous contacter >
+  rendez-vous:
+    titre: Rendez-vous
+    icone: cal
+    texte: |-
+      Vous pouvez prendre rendez-vous par téléphone au [02/527 97 90](tel:025279790) ou en remplissant le formulaire sur notre site internet
+    lien: Prendre un rendez-vous >
+  prescription:
+    titre: Prescription
+    icone: note
+    texte: |-
+      Vous pouvez demander une prescription à votre médecin sans prendre de rendez-vous.
+    lien: Faire une demande de prescription >
+barrelaterale: [horaires, contact, rendez-vous, prescription]
+blocksaccueil: [horaires, contact, rendez-vous, prescription]
+pieddepage: [horaires, contact, rendez-vous, prescription]
+
+
+
+
+

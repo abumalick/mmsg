@@ -1,0 +1,28 @@
+.hero {
+  height: 34vw;
+  max-height: 383px; /*1127*.34px;*/
+  /* fallback, mainly visible when hero image is loading */
+  background-color: var(--colorSecondary);
+  margin-bottom: 28px;
+}
+
+.hero2 {
+  margin-top: 14px
+}
+.hero2Body {
+  height: 100%;
+  background-color: #fff;
+  padding: 35px 20px;
+}
+.hero2Body h1 {
+  margin-top: 5px;
+  font-weight: 300;
+  font-size: 30px;
+  font-size:  2.143rem;
+  white-space: pre;
+}
+.hero2Body p {
+  font-size:  17px;
+  font-size:  1.2rem;
+}
+

@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome",
+      "url": "http://localhost:3333",
+      "webRoot": "${workspaceRoot}",
+      "timeout": "30000",
+      "userDataDir": false
+    },
+    {
+        "type": "chrome",
+        "request": "attach",
+        "name": "Attach Chrome",
+        "url": "http://localhost:3333",
+        "port": 9222,
+        "webRoot": "${workspaceRoot}"
+    }
+  ]
+}

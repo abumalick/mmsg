@@ -1,0 +1,39 @@
+.grid:global(.grid) {
+  margin-top: 14px;
+}
+.menuLink {
+  display: flex;
+  padding: .5em 6px;
+  align-items: center;
+  color:#333;
+  font-weight: 300;
+}
+:global(.ui.menu) .menuHeader {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300 !important;
+  /*padding: 12px 0 0;*/
+  padding-bottom: 15px;
+  border-bottom: 1px #ccc solid;
+}
+.menuLink:global(.active) {
+  background-color: #dff0ff;
+  color: #000;
+  font-weight: 400;
+}
+.menuLink img {
+  margin-right: 6px;
+}
+.menuLink div {
+  font-size: 22px;
+}
+.tc {
+  text-align: center;
+}
+.body {
+  background: #fff;
+  padding: 40px
+}
+.body p {
+  font-size: 1.2em
+}

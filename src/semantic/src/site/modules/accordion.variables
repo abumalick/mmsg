@@ -1,0 +1,9 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+@styledTitleColor: #666;
+@styledContentPadding: 0.5em 3em 1.5em;
+
+
+@styledTitlePadding: 0.75em 1.5em;

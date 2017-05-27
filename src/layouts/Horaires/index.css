@@ -1,0 +1,79 @@
+.hero:global(.grid) {
+  margin-top: 14px;
+}
+
+.heroBody {
+  background-color: #fff;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.heroBody h1 {
+  margin-bottom: 0;
+}
+
+.heroImg img {
+  max-height: 230px;
+  margin-top: 20px;
+}
+.heroBody > div {
+  display: inline-block;
+  text-align: center;
+  /*margin-left: 70px;*/
+}
+.heroBody p {
+  font-size: 18px;
+}
+
+.faq {
+  background-color: #fff;
+  margin-top: 14px;
+  margin-bottom: 28px;
+  padding: 40px 20px 20px;
+}
+
+.faq h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero {
+  background-color: #fff;
+  margin-top: 35px;
+  margin-bottom: 14px;
+}
+
+.left {
+  text-align: left;
+}
+.horaires > p > p {
+  /*margin-left: auto;
+  margin-right: auto;*/
+  padding: 10px 30px;
+  display: inline-block;
+  background-color: #f2f2f2;
+}
+.apresHoraires {
+  display: inline-block;
+}
+.apresHoraires p {
+  margin-bottom: 0;
+}
+.apresHoraires ul {
+  text-align: left;
+  margin: 0 0 0 25px;
+}
+
+.pageHoraires :global(.phenomic-BodyContainer) {
+  background-color: #fff;
+  padding: 40px 100px 30px;
+  margin-top: 14px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  /*text-align: center;*/
+}
+.pageHoraires :global(.phenomic-BodyContainer) p {
+  max-width: 600px;
+  padding-left: 20px;
+}

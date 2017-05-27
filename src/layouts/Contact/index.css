@@ -1,0 +1,48 @@
+.hero {
+  margin-top: 0px;
+  margin-bottom: 14px;
+  padding-top: 20px;
+  padding-left: 20px;
+  height: 47vw;
+  min-height: 250px;
+  max-height: 529px;
+  /*1127*.47px;*/
+  /* fallback, mainly visible when hero image is loading */
+  background-color: var(--colorSecondary);
+  cursor: pointer;
+}
+:global(.block-hero) {
+  background-color: rgba(255, 255, 255, .85);
+  padding: 20px 8px 10px;
+  /*margin-left: 20px;*/
+  /*margin-top: 20px;*/
+  width: 275px;
+  /*display: inline-block;*/
+}
+:global(.block-hero) :global(.block-svg) {
+  display: block;
+}
+.heroBlock {
+  cursor: initial;
+}
+.heroBlock div > a:last-child {
+  display: none;
+}
+
+.hero2 {
+  background-color: #fff;
+  margin-top: 28px;
+}
+.hero2Img div{
+  padding: 10px;
+}
+.hero2Body {
+  padding-top: 40px;
+}
+.hero2Body p {
+  font-size: 18px;
+}
+
+.formWrapper {
+  padding-top: 20px;
+}

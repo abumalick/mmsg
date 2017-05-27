@@ -1,0 +1,22 @@
+.hero {
+  background-color: #fff;
+  margin-top: 35px;
+  margin-bottom: 14px;
+}
+.heroImg div {
+  padding-left: 50px;
+}
+.heroImg img {
+  max-height:230px;
+}
+.heroBody {
+  padding-top: 40px;
+}
+
+.heroBody p {
+  font-size: 18px;
+}
+
+.formWrapper {
+  margin-top: -6px;
+}
