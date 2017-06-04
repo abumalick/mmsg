@@ -6,12 +6,16 @@ backend:
 media_folder: "content/assets"
 public_folder: "/assets" # the same as your phenomic.source in your package.json
 
+
 collections:
-  - name: "nouveaute"
-    label: "Nouveauté"
+  - name: "nouveautes"
+    label: "Nouveautés"
     folder: "content/nouveautes"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    filter:
+      field: layout
+      value: 'Nouveaute'
     fields:
       - {label: "Titre", name: "title", widget: "string"}
       - {label: "Date de publication", name: "date", widget: "datetime"}
@@ -196,7 +200,7 @@ collections:
       - name: "accueil"
         label: "Accueil"
         file: "content/index.md"
-        description: "Page d'accueil du site"
+        description: "Page d'accueil du site'"
         fields:
           - {label: "Layout", name: "layout", widget: "hidden", default: "Homepage"}
           - {label: "Titre de la page", name: "title", widget: "string"}
@@ -211,9 +215,52 @@ collections:
       preview: false
     files:
       - name: "general"
-        label: "Général"
-        file: "info.yaml"
+        label: "Général | Attention !"
+        file: "info.yml"
         description: "Paramètres générales du site"
         fields:
           - {label: "Titre du site", name: "nomdusite", widget: "string"}
-
+          - {label: "Teléphone", name: "tel", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Adresse", name: "adresse", widget: "markdown"}
+          - {label: "Lien google map", name: "carte", widget: "string"}
+          - {label: "License", name: "license", widget: "markdown"}
+          - label: "Blocs de pied de page et barre latérale"
+            name: blocs
+            widget: object
+            fields:
+              - label: "Bloc horaires"
+                name: horaires
+                widget: object
+                fields:
+                  - {label: "Titre du bloc", name: titre, widget: string}
+                  - {label: "Icône du bloc", name: icone, widget: string}
+                  - {label: "Texte du bloc", name: texte, widget: markdown}
+                  - {label: "Texte du Lien", name: lien, widget: string}
+              - label: "Bloc contact"
+                name: contact
+                widget: object
+                fields:
+                  - {label: "Titre du bloc", name: titre, widget: string}
+                  - {label: "Icône du bloc", name: icone, widget: string}
+                  - {label: "Texte du bloc", name: texte, widget: markdown}
+                  - {label: "Texte du Lien", name: lien, widget: string}
+              - label: "Bloc rendez-vous"
+                name: rendez-vous
+                widget: object
+                fields:
+                  - {label: "Titre du bloc", name: titre, widget: string}
+                  - {label: "Icône du bloc", name: icone, widget: string}
+                  - {label: "Texte du bloc", name: texte, widget: markdown}
+                  - {label: "Texte du Lien", name: lien, widget: string}
+              - label: "Bloc prescription"
+                name: prescription
+                widget: object
+                fields:
+                  - {label: "Titre du bloc", name: titre, widget: string}
+                  - {label: "Icône du bloc", name: icone, widget: string}
+                  - {label: "Texte du bloc", name: texte, widget: markdown}
+                  - {label: "Texte du Lien", name: lien, widget: string}
+          - {label: "Blocs de la barre latérale", name: barrelaterale, widget: list}
+          - {label: "Blocs de la page d'accueil", name: blocksaccueil, widget: list}
+          - {label: "Blocs du pied de page", name: pieddepage, widget: list}
