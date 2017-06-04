@@ -1,23 +1,19 @@
 import PropTypes from 'prop-types';
 import React from "react";
-import { Link } from "phenomic"
-import { Button } from 'semantic-ui-react'
+import Markdown from '../../components/Markdown'
 
-// import Button from "../../components/Button"
 
 import styles from "./index.css"
 
-const PagePreview = ({ __url, title, date, description }) => {
+const PagePreview = ({ __url, title, date, description, text }) => {
   const pageDate = date ? new Date(date) : null
 
   return (
     <div className={ styles.wrapper }>
-      <Link to={ __url } className={ styles.title }>
-        <h2>
-          { title }
-        </h2>
-      </Link>
       <div className={ styles.meta }>
+      <h2 className={ styles.title }>
+        { title }
+      </h2>
         {
           pageDate &&
             <time key={ pageDate.toISOString() }>
@@ -31,15 +27,8 @@ const PagePreview = ({ __url, title, date, description }) => {
         }
       </div>
       <div className={ styles.description }>
-        { description }
-        { " " }
+        <Markdown text={text} />
       </div>
-      <Link to={ __url } className={ styles.readMore }>
-        <Button
-          primary
-          size="large"
-        >{ "Lire la suite →" }</Button>
-      </Link>
     </div>
   )
 }
@@ -49,6 +38,7 @@ PagePreview.propTypes = {
   title: PropTypes.string.isRequired,
   date: PropTypes.string,
   description: PropTypes.string,
+  text: PropTypes.string.isRequired,
 }
 
 export default PagePreview

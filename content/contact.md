@@ -11,7 +11,7 @@ form:
   title: Laisser un message
   message:
     titre: Votre message
-    aide: Ecrivez ici votre message
+    aide: Ecrivez votre message ici
 
 ---
 Vous pouvez nous téléphoner au [02/527 97 90](tel:025279790)

@@ -1,6 +1,6 @@
 // you can add any STATIC data you want here
 import pkg from "../package.json"
-import info from "../info.yaml"
+import info from "../info.yml"
 
 export default {
   pkg,

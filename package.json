@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "mmsg",
-  "homepage": "http://mmsg.be",
+  "homepage": "https://mmsg.be",
   "version": "0.0.2",
   "twitter": "",
   "repository": "git@github.com:asbab/mmsg.git",
@@ -17,7 +17,9 @@
     "deploy": "./scripts/deploy.sh"
   },
   "phenomic": {
-    "CNAME": true
+    "CNAME": true,
+    "source": "/content",
+    "assets": "assets"
   },
   "#babel": "webpack-(development|production) are useful for webpack 2, otherwise use development|production",
   "babel": {
@@ -135,5 +137,8 @@
     "webpack": "^2.3.0",
     "whatwg-fetch": "^0.11.0",
     "yml-loader": "^1.1.0"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.0.1"
   }
 }

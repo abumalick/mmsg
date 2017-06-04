@@ -3,10 +3,9 @@ import path from "path"
 import webpack from "webpack"
 import ExtractTextPlugin from "extract-text-webpack-plugin"
 import { phenomicLoader } from "phenomic"
-import PhenomicLoaderFeedWebpackPlugin
-  from "phenomic/lib/loader-feed-webpack-plugin"
-import PhenomicLoaderSitemapWebpackPlugin
-  from "phenomic/lib/loader-sitemap-webpack-plugin"
+import PhenomicLoaderFeedWebpackPlugin  from "phenomic/lib/loader-feed-webpack-plugin"
+import PhenomicLoaderSitemapWebpackPlugin  from "phenomic/lib/loader-sitemap-webpack-plugin"
+import CopyWebpackPlugin from "copy-webpack-plugin"
 
 import pkg from "./package.json"
 
@@ -227,6 +226,9 @@ export default (config = {}) => {
           { compress: { warnings: false } }
         ),
       ],
+      new CopyWebpackPlugin([
+        {from: 'admin', to: 'admin'},
+      ]),
     ],
 
     output: {

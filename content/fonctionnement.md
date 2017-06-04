@@ -34,6 +34,6 @@ form:
   title: Nous poser une question
   message:
     titre: Votre message
-    aide: Écrivez votre ici message
+    aide: Écrivez votre message ici
 ---
 
