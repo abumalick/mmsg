@@ -25,8 +25,10 @@ const DefaultHeadMeta = (props, { metadata: { pkg } }) => (
       meta={ [ {
         name: "viewport", content: "width=device-width, initial-scale=1",
       } ] }
-    />
-    <style>{ "@-ms-viewport { width: device-width; }" }</style>
+    >
+      <meta name="google-site-verification" content="RI-PdZte-1e7jfeusB9lvqn5ZdRjAyhBumpE6_v4oGY" />
+      <style>{ "@-ms-viewport { width: device-width; }" }</style>
+    </Helmet>
   </div>
 )
 
