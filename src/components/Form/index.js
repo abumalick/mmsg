@@ -103,7 +103,7 @@ class AForm extends Component {
           </Form.Group>
           {
             data.medecin &&
-            <Form.Field name="Medecin" label={data.medecin.titre} placeholder={data.medecin.aide} control="select" defaultValue="" onChange={this.handleSelectChange}>
+            <Form.Field name="Médecin" label={data.medecin.titre} placeholder={data.medecin.aide} control="select" defaultValue="" onChange={this.handleSelectChange}>
               <option value="" className={styles.hide} disabled>{data.medecin.aide}</option>
               {
                 data.medecin.liste.map((medecin) => (
@@ -114,7 +114,7 @@ class AForm extends Component {
           }
           {
             data.date &&
-            <Form.Input name="Date_de_naissance" label={data.date.titre} placeholder={data.date.aide} onChange={this.handleChange} />
+            <Form.Input name="Date" label={data.date.titre} placeholder={data.date.aide} onChange={this.handleChange} />
           }
           {
             data.medicament &&
