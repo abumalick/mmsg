@@ -88,7 +88,6 @@ collections:
                 fields:
                   - {label: "Titre du bloc message", name: titre, widget: string}
                   - {label: "Aide du bloc message", name: aide, widget: string}
-          - {label: "Image", name: "hero", widget: "image"}
       - name: "rendez-vous"
         label: "Rendez-vous"
         file: "content/rendez-vous.md"
@@ -130,7 +129,6 @@ collections:
                 fields:
                   - {label: "Titre du bloc message", name: titre, widget: string}
                   - {label: "Aide du bloc message", name: aide, widget: string}
-          - {label: "Image", name: "hero", widget: "image"}
       - name: "contact"
         label: "Contact"
         file: "content/contact.md"
@@ -152,8 +150,6 @@ collections:
                 fields:
                   - {label: "Titre du bloc message", name: titre, widget: string}
                   - {label: "Aide du bloc message", name: aide, widget: string}
-          - {label: "Image d'en-tête", name: "hero", widget: "image"}
-          - {label: "Image", name: "hero2", widget: "image"}
       - name: "services"
         label: "Accueil des services"
         file: "content/services/index.md"
@@ -218,7 +214,6 @@ collections:
                 fields:
                   - {label: "Titre du bloc message", name: titre, widget: string}
                   - {label: "Aide du bloc message", name: aide, widget: string}
-          - {label: "Image", name: "hero", widget: "image"}
       - name: "horaires"
         label: "Horaires"
         file: "content/horaires.md"
@@ -230,7 +225,6 @@ collections:
           - {label: "Titre affiché", name: "titre", widget: "string"}
           - {label: "Texte en dessous des horaires", name: "apres-horaires", widget: "markdown"}
           - {label: "Contenu de la page", name: "body", widget: "markdown"}
-          - {label: "Image", name: "hero", widget: "image"}
       - name: "nouveautes"
         label: "Page des Nouveautés"
         file: "content/nouveautes/index.md"
@@ -249,8 +243,6 @@ collections:
           - {label: "Description de la page", name: "description", widget: "string"}
           - {label: "Titre du bloc de présentation", name: "titre", widget: "markdown"}
           - {label: "Texte du bloc de présentation", name: "body", widget: "markdown"}
-          - {label: "Première image", name: "hero", widget: "image"}
-          - {label: "Seconde image", name: "hero2", widget: "image"}
   - name: "parametres"
     label: "Paramètres"
     editor:
