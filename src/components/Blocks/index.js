@@ -15,9 +15,11 @@ const icons = {
   direction,
   note
 }
+import styles from './styles.css'
+
 // <Image src={`/assets/icons/${block.icone}.svg`} alt={block.icone} centered height={props.theme === 'pieddepage' ? '16px' : '35px'} />
 const Block = ({block, theme}, { metadata: { info: {blocs} } }) => (
-  <div className={`block block-${theme}`}>
+  <div className={`block block-${theme} ${styles.block}`}>
     <h3><Svg className="block-svg" svg={icons[blocs[block].icone]} cleanup height={theme === 'pieddepage' ? '16px' : '35px'} /> {blocs[block].titre}</h3>
     <Markdown text={blocs[block].texte} />
     <Link to={`/${block}`}>{blocs[block].lien}</Link>
