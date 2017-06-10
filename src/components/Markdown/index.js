@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React from "react";
+import React from 'react';
 const marked = require('marked');
 
 marked.setOptions({
@@ -10,15 +10,14 @@ marked.setOptions({
   pedantic: false,
   sanitize: false,
   smartLists: true,
-  smartypants: false
+  smartypants: false,
 });
 
-const Markdown = (props) => (
-  <p dangerouslySetInnerHTML={{ __html: marked(props.text) }}></p>
-)
+const Markdown = props =>
+  <p dangerouslySetInnerHTML={{__html: marked(props.text)}} />;
 
 Markdown.propTypes = {
   text: PropTypes.string.isRequired,
-}
+};
 
-export default Markdown
+export default Markdown;

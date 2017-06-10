@@ -1,17 +1,16 @@
 // http://react.semantic-ui.com/collections/form#success
-import React from 'react'
-import { Button, Form, Input, Message } from 'semantic-ui-react'
+import React from 'react';
+import {Button, Form, Input, Message} from 'semantic-ui-react';
 
-const Test = () => (
+const Test = () =>
   <Form success>
-    <Form.Input label='Email' placeholder='joe@schmoe.com' />
+    <Form.Input label="Email" placeholder="joe@schmoe.com" />
     <Message
       success
-      header='Form Completed'
+      header="Form Completed"
       content="You're all signed up for the newsletter"
     />
     <Button>Submit</Button>
-  </Form>
-)
+  </Form>;
 
-export default Test
+export default Test;
