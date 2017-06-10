@@ -41,7 +41,7 @@ collections:
             widget: object
             fields:
               - {label: "Titre du formulaire", name: title, widget: string}
-              - {label: "Description du formulaire", name: description, widget: string}
+              - {label: "Description du formulaire", name: description, widget: markdown}
               - label: "Bloc téléphone"
                 name: telephone
                 widget: object
