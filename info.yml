@@ -57,12 +57,24 @@ blocksaccueil:
   - rendez-vous
   - prescription
 menu:
-  Accueil: /
-  Contact: /contact
-  Fonctionnement: /fonctionnement
-  Horaires: /horaires
-  Nouveautés: /nouveautes
-  Services: /services
+  i1:
+    title: Accueil
+    link: /
+  i2:
+    title: Horaires
+    link: /horaires
+  i3:
+    title: Nouveautés
+    link: /nouveautes
+  i4:
+    title: Fonctionnement
+    link: /fonctionnement
+  i5:
+    title: Services
+    link: /services
+  i6:
+    title: Contact
+    link: /contact
 pieddepage:
   - horaires
   - contact

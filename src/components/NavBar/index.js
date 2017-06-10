@@ -16,10 +16,10 @@ const NavBar = ({ menu, handleClick }) => (
       </Link>
     </Menu.Item>
     {
-      Object.keys(menu).map((item) => (
-        <Menu.Item name={item} key={item} className="hide-mobile">
-          <Link to={menu[item]} activeClassName="active">
-            {item}
+      Object.entries(menu).map(([key, {title, link}]) => (
+        <Menu.Item name={title} key={title} className="hide-mobile">
+          <Link to={link} activeClassName="active">
+            {title}
           </Link>
         </Menu.Item>
       ))

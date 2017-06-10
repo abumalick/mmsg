@@ -37,10 +37,10 @@ class Nav extends Component {
             inverted
           >
             {
-              Object.keys(menu).map((item) => (
-                <Menu.Item name={item} key={item}>
-                  <Link to={menu[item]} activeClassName="active">
-                    {item}
+              Object.entries(menu).map(([key, {title, link}]) => (
+                <Menu.Item name={title} key={title}>
+                  <Link to={link} activeClassName="active">
+                    {title}
                   </Link>
                 </Menu.Item>
               ))
