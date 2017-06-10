@@ -1,8 +1,7 @@
 {
-  "cSpell.language": "fr",
-  "cSpell.enabledLanguageIds": [
-    "markdown"
-  ],
-  "cSpell.words": [],
-
+  "prettier.singleQuote": true,
+  "prettier.bracketSpacing": false,
+  "prettier.jsxBracketSameLine": true,
+  "prettier.trailingComma": "all",
+  "editor.formatOnSave": true
 }
