@@ -1,8 +1,8 @@
 ---
 title: Kinésithérapie
-icon: /assets/services/kinesitherapie.svg
-layout: Service
 ordre: 8
+layout: Service
+icon: /assets/services/kinesitherapie.svg
 ---
 ## Définition
 La kinésithérapie est une discipline paramédicale qui utilise les massages, les mouvements et exercices physiques dans le but de renforcer, maintenir ou rétablir les capacités fonctionnelles.
@@ -18,4 +18,5 @@ Nous mettons à disposition une équipe multidisciplinaire spécialisée mixte (
 
 ## Paiement
 Le service de kinésithérapie n'est pour le moment pas compris dans le forfait. Le patient doit payer la consultation; la mutuelle lui remboursera une partie déterminée et **le ticket modérateur restera à sa charge**.
+
 
