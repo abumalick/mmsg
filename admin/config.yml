@@ -21,6 +21,21 @@ collections:
       - {label: "Date de publication", name: "date", widget: "datetime"}
       - {label: "Texte", name: "text", widget: "markdown"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "Nouveaute"}
+  - name: "services"
+    label: "Services"
+    folder: "content/services"
+    create: false
+    slug: "{{slug}}"
+    order: ordre
+    filter:
+      field: layout
+      value: 'Service'
+    fields:
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Ordre", name: "ordre", widget: "number"}
+      - {label: "Texte", name: "body", widget: "markdown"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "Service"}
+      - {label: "Icone", name: "icon", widget: "hidden"}
   - name: "pages"
     label: "Pages"
     editor:
@@ -298,3 +313,18 @@ collections:
           - {label: "Blocs de la barre latérale", name: barrelaterale, widget: list}
           - {label: "Blocs de la page d'accueil", name: blocksaccueil, widget: list}
           - {label: "Blocs du pied de page", name: pieddepage, widget: list}
+  - name: "services"
+    label: "Services"
+    folder: "content/services"
+    create: false
+    slug: "{{slug}}"
+    order: ordre
+    filter:
+      field: layout
+      value: 'Service'
+    fields:
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Ordre", name: "ordre", widget: "number"}
+      - {label: "Texte", name: "body", widget: "markdown"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "Service"}
+      - {label: "Icone", name: "icon", widget: "hidden"}
