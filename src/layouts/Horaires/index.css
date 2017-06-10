@@ -47,12 +47,12 @@
 .left {
   text-align: left;
 }
-.horaires > p > p {
-  /*margin-left: auto;
-  margin-right: auto;*/
+.horaires > p {
   padding: 10px 30px;
-  display: inline-block;
   background-color: #f2f2f2;
+}
+.horaires > p > p {
+  margin-bottom: 0;
 }
 .apresHoraires {
   display: inline-block;
