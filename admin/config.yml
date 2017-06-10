@@ -165,6 +165,40 @@ collections:
           - {label: "Description de la page", name: "description", widget: "string"}
           - {label: "Titre affiché", name: "titre", widget: "string"}
           - {label: "Titre du bloc Q&R", name: "titreFaq", widget: "string"}
+          - label: "Q&R"
+            name: "faq"
+            widget: "object"
+            fields:
+              - label: Question 1
+                name: q1
+                widget: object
+                fields:
+                  - {label: "Titre", name: title, widget: string}
+                  - {label: "Réponse", name: content, widget: markdown}
+              - label: Question 2
+                name: q2
+                widget: object
+                fields:
+                  - {label: "Titre", name: title, widget: string}
+                  - {label: "Réponse", name: content, widget: markdown}
+              - label: Question 3
+                name: q3
+                widget: object
+                fields:
+                  - {label: "Titre", name: title, widget: string}
+                  - {label: "Réponse", name: content, widget: markdown}
+              - label: Question 4
+                name: q4
+                widget: object
+                fields:
+                  - {label: "Titre", name: title, widget: string}
+                  - {label: "Réponse", name: content, widget: markdown}
+              - label: Question 5
+                name: q5
+                widget: object
+                fields:
+                  - {label: "Titre", name: title, widget: string}
+                  - {label: "Réponse", name: content, widget: markdown}
           - label: "Formulaire de contact"
             name: form
             widget: object
