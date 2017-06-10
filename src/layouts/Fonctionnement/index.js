@@ -30,18 +30,20 @@ class Fonctionnement extends Component {
   render() {
     var accordionItems = [];
     let i = 0;
-    Object.keys(this.props.head.faq).forEach((title) => {
-      accordionItems.push(
-        <Accordion.Title className={styles.faqTitle} key={`title-${i}`} onClick={this.handleClick}>
-          <h3>{title}</h3>
-          {(this.state.active === i) ? (<span className={styles.plus}>▾</span>) : (<span className={styles.plus}>◂</span>)}
-        </Accordion.Title>
-      );
-      accordionItems.push(
-        <Accordion.Content key={`content-${i++}`}>
-          <Markdown text={this.props.head.faq[title]} />
-        </Accordion.Content>
-      );
+    Object.entries(this.props.head.faq).forEach(([key, { title, content }]) => {
+      if (title) {
+        accordionItems.push(
+          <Accordion.Title className={styles.faqTitle} key={`title-${i}`} onClick={this.handleClick}>
+            <h3>{title}</h3>
+            {(this.state.active === i) ? (<span className={styles.plus}>▾</span>) : (<span className={styles.plus}>◂</span>)}
+          </Accordion.Title>
+        );
+        accordionItems.push(
+          <Accordion.Content key={`content-${i++}`}>
+            <Markdown text={content} />
+          </Accordion.Content>
+        );
+      }
 
     });
     return (
