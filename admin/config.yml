@@ -63,21 +63,18 @@ collections:
                 fields:
                   - {label: "Titre du bloc téléphone", name: titre, widget: string}
                   - {label: "Aide du bloc téléphone", name: aide, widget: string}
-                  - {label: "Obligatoire ?", name: "obligatoire", widget: "boolean", default: "1"}
               - label: "Bloc date de naissance"
                 name: naissance
                 widget: object
                 fields:
                   - {label: "Titre du bloc téléphone", name: titre, widget: string}
                   - {label: "Aide du bloc téléphone", name: aide, widget: string}
-                  - {label: "Obligatoire ?", name: "obligatoire", widget: "boolean", default: "1"}
               - label: "Bloc Médecins"
                 name: medecin
                 widget: object
                 fields:
                   - {label: "Titre du bloc Médecins", name: titre, widget: string}
                   - {label: "Aide du bloc Médecins", name: aide, widget: string}
-                  - {label: "Obligatoire ?", name: "obligatoire", widget: "boolean", default: "1"}
                   - {label: "liste des Médecins", name: liste, widget: list}
               - label: "Bloc Médicament"
                 name: medicament
@@ -85,7 +82,6 @@ collections:
                 fields:
                   - {label: "Titre du bloc Médicament", name: titre, widget: string}
                   - {label: "Aide du bloc Médicament", name: aide, widget: string}
-                  - {label: "Obligatoire ?", name: "obligatoire", widget: "boolean", default: "1"}
               - label: "Bloc message"
                 name: message
                 widget: object
@@ -115,14 +111,12 @@ collections:
                 fields:
                   - {label: "Titre du bloc téléphone", name: titre, widget: string}
                   - {label: "Aide du bloc téléphone", name: aide, widget: string}
-                  - {label: "Obligatoire ?", name: "obligatoire", widget: "boolean", default: "1"}
               - label: "Bloc Médecins"
                 name: medecin
                 widget: object
                 fields:
                   - {label: "Titre du bloc Médecins", name: titre, widget: string}
                   - {label: "Aide du bloc Médecins", name: aide, widget: string}
-                  - {label: "Obligatoire ?", name: "obligatoire", widget: "boolean", default: "1"}
                   - {label: "liste des Médecins", name: liste, widget: list}
               - label: "Bloc Date"
                 name: date
@@ -130,7 +124,6 @@ collections:
                 fields:
                   - {label: "Titre du bloc Date", name: titre, widget: string}
                   - {label: "Aide du bloc Date", name: aide, widget: string}
-                  - {label: "Obligatoire ?", name: "obligatoire", widget: "boolean", default: "1"}
               - label: "Bloc message"
                 name: message
                 widget: object
