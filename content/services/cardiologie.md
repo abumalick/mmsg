@@ -23,3 +23,4 @@ La cardiologie est la spécialité médicale qui étudie le cœur, les maladies 
 ## Paiement
 Conformément à la loi Belge concernant les services spécialisés, le service de cardiologie n'est pas compris dans le forfait. Le patient doit payer la consultation; la mutuelle lui remboursera une partie déterminée et **le ticket modérateur restera à sa charge**.
 
+
