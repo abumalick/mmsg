@@ -53,3 +53,4 @@ hero: /assets/img/prescription.jpg
 Vous avez besoin d'une prescription et vous ne voulez pas un nouveau rendez-vous rien que pour ça ?
 
 Vous pouvez commander une prescription via le formulaire ci-dessous.
+
