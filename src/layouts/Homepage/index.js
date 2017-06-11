@@ -54,7 +54,7 @@ export default class Homepage extends Component {
                   computer={8}>
                   <Image
                     src={this.props.head.hero2}
-                    alt="Photo de La Maison Médicale de Saint-Guidon"
+                    alt="Photo de La Maison Médicale"
                     fluid
                   />
                 </Grid.Column>
