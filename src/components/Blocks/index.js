@@ -19,17 +19,20 @@ import styles from './styles.css';
 
 // <Image src={`/assets/icons/${block.icone}.svg`} alt={block.icone} centered height={props.theme === 'pieddepage' ? '16px' : '35px'} />
 const Block = ({block, theme}, {metadata: {info: {blocs}}}) =>
-  <div className={`block block-${theme} ${styles.block}`}>
+  <div className={`block block-${theme}`}>
     <h3>
       <Svg
         className="block-svg"
         svg={icons[blocs[block].icone]}
         cleanup
         height={theme === 'pieddepage' ? '16px' : '35px'}
-      />{' '}
+      />
+      {' '}
       {blocs[block].titre}
     </h3>
-    <Markdown text={blocs[block].texte} />
+    <div className={styles.blockText}>
+      <Markdown text={blocs[block].texte} />
+    </div>
     <Link to={`/${block}`}>{blocs[block].lien}</Link>
   </div>;
 Block.propTypes = {

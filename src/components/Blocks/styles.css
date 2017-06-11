@@ -1,3 +1,6 @@
-.block p > p {
+.blockText {
+  margin-bottom: 8px;
+}
+.blockText p {
   margin-bottom: 0;
 }
