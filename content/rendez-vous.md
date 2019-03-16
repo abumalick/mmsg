@@ -22,9 +22,9 @@ form:
       - Dr. Sheta Abderraouf (Cardiologue)
       - Dr. El Mrabti Mohamed (Radiologie)
       - Dr. El Khabbabi Karima (Pédiatre)
-      - Belabbas Badr (Kinésithérapeute)
+      - Dours Laeticia (Kinésithérapeute)
       - Cherif Zaineb (Kinésithérapeute)
-      - Jeday Mohammed Ali (Infirmier)
+      - Breuls Nathalie (Infirmier)
       - Enara Julienne (Infirmière)
     obligatoire: 1
     titre: Spécialiste
@@ -38,5 +38,6 @@ form:
 hero: /assets/img/rendez-vous.jpg
 ---
 Vous pouvez prendre rendez-vous 24h/24 7j/7 via le formulaire ci-dessous.
+
 
 
