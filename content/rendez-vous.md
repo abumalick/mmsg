@@ -19,7 +19,8 @@ form:
   medecin:
     aide: Choisissez votre spécialiste
     liste:
-      - Dr. Sheta Abderraouf (Cardiologue)
+      - Dr. El Hajjami Fatiha (Généraliste)
+      - Sheta Abderraouf (Cardiologue)
       - Dr. El Mrabti Mohamed (Radiologie)
       - Dr. El Khabbabi Karima (Pédiatre)
       - Dours Laeticia (Kinésithérapeute)
@@ -38,6 +39,7 @@ form:
 hero: /assets/img/rendez-vous.jpg
 ---
 Vous pouvez prendre rendez-vous 24h/24 7j/7 via le formulaire ci-dessous.
+
 
 
 
