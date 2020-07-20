@@ -2,7 +2,7 @@
   "private": true,
   "name": "mmsg",
   "homepage": "https://mmsg.be",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "twitter": "",
   "repository": "git@github.com:asbab/mmsg.git",
   "scripts": {
