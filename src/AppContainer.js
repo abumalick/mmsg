@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {ToastContainer} from 'react-toastify';
 
 import './semantic/dist/semantic.min.css';
 import './index.global.css';
@@ -10,15 +11,15 @@ import Header from './components/Header';
 import Content from './components/Content';
 import Footer from './components/Footer';
 
-const AppContainer = props =>
+const AppContainer = (props) => (
   <Container>
     <DefaultHeadMeta />
     <Header />
-    <Content>
-      {props.children}
-    </Content>
+    <Content>{props.children}</Content>
     <Footer />
-  </Container>;
+    <ToastContainer />
+  </Container>
+);
 
 AppContainer.propTypes = {
   children: PropTypes.node,

@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {Form, Message, Select} from 'semantic-ui-react';
+import {Form, Message} from 'semantic-ui-react';
 import Markdown from '../../components/Markdown';
+import {toast} from 'react-toastify';
 
 import styles from './index.css';
 import Svg from 'react-svg-inline'; // <Svg svg={ twitterSvg } cleanup />
@@ -22,6 +23,21 @@ class AForm extends Component {
   static propTypes = {
     data: PropTypes.object,
   };
+
+  componentDidMount() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const success = urlParams.get('success');
+    if (success) {
+      toast.success(
+        'Message envoyé: Nous vous répondons dans les plus brefs délais',
+        {
+          position: toast.POSITION.TOP_CENTER,
+        },
+      );
+      window.history.replaceState(null, null, window.location.pathname);
+    }
+  }
+
   handleValidate = (e) => {
     if (
       this.state.values.Email &&
@@ -73,7 +89,9 @@ class AForm extends Component {
     const {values} = this.state;
     const {data} = this.props;
     const currentUrl =
-      typeof window !== 'undefined' && window.location.toString();
+      typeof window !== 'undefined' &&
+      window.location.origin + window.location.pathname;
+    const successUrl = currentUrl + '?success=true';
     const formName = data.subject ? data.subject : 'Formulaire de contact';
     const subject = `${formName}: message de ${values['Nom'] || "quelqu'un"} ${
       values['Prénom'] || ''
@@ -120,7 +138,7 @@ class AForm extends Component {
             />
             <input type="hidden" name="_replyTo" value={values['Email']} />
           </Form.Group>
-          <input type="hidden" name="_redirect" value={currentUrl} />
+          <input type="hidden" name="_redirect" value={successUrl} />
           <input type="text" name="_honeypot" style={{display: 'none'}} />
           <Form.Group widths="equal">
             {data.telephone && (
