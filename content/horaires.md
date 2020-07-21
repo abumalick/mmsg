@@ -13,15 +13,13 @@ apres-horaires: |-
 hero: /assets/img/horaires.jpg
 introduction: null
 ---
-# Horaires des différents services
-## [Service de prélèvements](/services/prelevements/)
-- Du lundi au vendredi de 9h à 12h30.
 
-## [Service de pédiatrie](/services/pediatrie)
-- Le mercredi entre 9h et 12h et de 14h à 18h
-- Le jeudi entre 9h et 12h30
-- le vendredi entre 14h à 18h
+# Horaires des différents services
+
+## [Service de prélèvements](/services/prelevements/)
+
+- Du lundi au vendredi de 8h30 à 12h30.
 
 ## [Autres services](/services/)
-Les autres services sont [sur rendez-vous](/rendez-vous).
 
+Les autres services sont [sur rendez-vous](/rendez-vous).

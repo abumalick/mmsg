@@ -18,16 +18,15 @@ form:
     Remplissez ce formulaire pour faire une demande de rendez-vous selon vos
     préférences. Vous serrez ensuite contactés par téléphone pour confirmation.
   medecin:
-    aide: Choisissez votre spécialiste
+    aide: Choisissez votre généraliste
     liste:
-      - Dr. El Hajjami Fatiha (Généraliste)
-      - Sheta Abderraouf (Cardiologue)
-      - Dr. El Mrabti Mohamed (Radiologie)
-      - Dr. El Khabbabi Karima (Pédiatre)
-      - Dours Laeticia (Kinésithérapeute)
-      - Cherif Zaineb (Kinésithérapeute)
-      - Breuls Nathalie (Infirmier)
-      - Enara Julienne (Infirmière)
+      - Dr. ZEKHNINI Mohammed
+      - Dr. WASHIWAPA Rachel
+      - Dr. EL HAJJAMI Fatiha
+      - Dr. KEPNANG Cyrille
+      - Dr. RAMADAN Soubhi
+      - Dr. CAPRONT Emilia
+      - Autre
     obligatoire: 1
     titre: Spécialiste
   message:

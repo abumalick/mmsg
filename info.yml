@@ -5,7 +5,7 @@ adresse: |-
   Avenue Paul Janson 44,
 
   1070 Anderlecht
-carte: 'https://goo.gl/maps/H7VVEMLE44m'
+carte: "https://goo.gl/maps/H7VVEMLE44m"
 license: >-
   ©2017 - [mmsg.be](https://mmsg.be) - sous une license [CC BY
   4.0](http://creativecommons.org/licenses/by/4.0/)
@@ -28,9 +28,9 @@ blocs:
     texte: |-
       Du Lundi au Vendredi
 
-      De 9h00 à 12h30
+      De 9h00 à 18h
 
-      De 14h00 à 18h00
+      Uniquement sur rendez-vous
     titre: Horaires
   prescription:
     icone: note
