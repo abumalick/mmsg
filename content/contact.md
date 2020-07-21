@@ -12,10 +12,11 @@ form:
     aide: Ecrivez votre message ici
     titre: Votre message
   title: Laisser un message
+  subject: Contact
 hero: /assets/img/mmsg-map.jpg
 hero2: /assets/img/contact.jpg
 ---
+
 Vous pouvez nous téléphoner au [02/527 97 90](tel:025279790)
 
 Ou remplir le formulaire de contact ci-dessous :
-

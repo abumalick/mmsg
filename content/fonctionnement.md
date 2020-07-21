@@ -71,7 +71,6 @@ form:
     aide: Écrivez votre message ici
     titre: Votre message
   title: Nous poser une question
+  subject: Question
 hero: /assets/img/fonctionnement.jpg
 ---
-
-

@@ -7,6 +7,9 @@ import styles from './index.css';
 import Svg from 'react-svg-inline'; // <Svg svg={ twitterSvg } cleanup />
 import send from '../../../content/assets/icons/send.svg';
 
+const FORM_SUBMIT_ENDPOINT =
+  'https://nw9m04mzw2.execute-api.eu-central-1.amazonaws.com/prod/';
+
 class AForm extends Component {
   constructor(props) {
     super(props);
@@ -19,7 +22,7 @@ class AForm extends Component {
   static propTypes = {
     data: PropTypes.object,
   };
-  handleValidate = e => {
+  handleValidate = (e) => {
     if (
       this.state.values.Email &&
       /\S+@\S+\.\S+/.test(this.state.values.Email)
@@ -44,7 +47,7 @@ class AForm extends Component {
       },
     }));
   };
-  handleSelectChange = event => {
+  handleSelectChange = (event) => {
     const {name, value} = event.target;
     this.setState((state, props) => ({
       values: {
@@ -53,13 +56,13 @@ class AForm extends Component {
       },
     }));
   };
-  handleAddMed = e => {
+  handleAddMed = (e) => {
     e.preventDefault();
     this.setState((prevState, props) => ({
       medicCount: prevState.medicCount + 1,
     }));
   };
-  handleRmMed = e => {
+  handleRmMed = (e) => {
     e.preventDefault();
     this.setState((prevState, props) => ({
       medicCount: prevState.medicCount - 1,
@@ -67,22 +70,35 @@ class AForm extends Component {
   };
 
   render() {
-    // const { value } = this.state
+    const {values} = this.state;
     const {data} = this.props;
+    const currentUrl =
+      typeof window !== 'undefined' && window.location.toString();
+    const formName = data.subject ? data.subject : 'Formulaire de contact';
+    const subject = `${formName}: message de ${values['Nom'] || "quelqu'un"} ${
+      values['Prénom'] || ''
+    }`;
     return (
       <div className={styles.container}>
         <h2>{data.title ? data.title : 'Laisser un message'}</h2>
-        {data.description &&
+        {data.description && (
           <div className={styles.desc}>
             <Markdown className={styles.desc} text={data.description} />
-          </div>}
+          </div>
+        )}
 
         <Form
           success={this.state.isSent}
           error={!!this.state.error}
-          action="https://envoi.mmsg.be/"
+          action={FORM_SUBMIT_ENDPOINT}
           method="POST"
           className={styles.form}>
+          <input
+            type="hidden"
+            name="_to"
+            value="e95edbfdd389793c0e04e1600c33560e"
+          />
+          <input type="hidden" name="_subject" value={subject} />
           <Form.Group widths="equal">
             <Form.Input
               name="Nom"
@@ -102,31 +118,29 @@ class AForm extends Component {
               placeholder="Votre Email"
               onChange={this.handleChange}
             />
-
+            <input type="hidden" name="_replyTo" value={values['Email']} />
           </Form.Group>
-          <input
-            type="hidden"
-            name="_form"
-            value={data.title ? data.title : 'Formulaire de contact'}
-          />
-          <input type="text" name="_gotyou" style={{display: 'none'}} />
+          <input type="hidden" name="_redirect" value={currentUrl} />
+          <input type="text" name="_honeypot" style={{display: 'none'}} />
           <Form.Group widths="equal">
-            {data.telephone &&
+            {data.telephone && (
               <Form.Input
                 name="Téléphone"
                 label={data.telephone.titre}
                 placeholder={data.telephone.aide}
                 onChange={this.handleChange}
-              />}
-            {data.naissance &&
+              />
+            )}
+            {data.naissance && (
               <Form.Input
                 name="Date_de_naissance"
                 label={data.naissance.titre}
                 placeholder={data.naissance.aide}
                 onChange={this.handleChange}
-              />}
+              />
+            )}
           </Form.Group>
-          {data.medecin &&
+          {data.medecin && (
             <Form.Field
               name="Médecin"
               label={data.medecin.titre}
@@ -137,20 +151,24 @@ class AForm extends Component {
               <option value="" className={styles.hide} disabled>
                 {data.medecin.aide}
               </option>
-              {data.medecin.liste.map(medecin =>
-                <option key={medecin} value={medecin}>{medecin}</option>,
-              )}
-            </Form.Field>}
-          {data.date &&
+              {data.medecin.liste.map((medecin) => (
+                <option key={medecin} value={medecin}>
+                  {medecin}
+                </option>
+              ))}
+            </Form.Field>
+          )}
+          {data.date && (
             <Form.Input
               name="Date"
               label={data.date.titre}
               placeholder={data.date.aide}
               onChange={this.handleChange}
-            />}
-          {data.medicament &&
+            />
+          )}
+          {data.medicament && (
             <div>
-              {[...Array(this.state.medicCount)].map((val, index) =>
+              {[...Array(this.state.medicCount)].map((val, index) => (
                 <Form.Group key={index} widths="equal">
                   <Form.Input
                     name={`Medicament_${index + 1}`}
@@ -164,25 +182,28 @@ class AForm extends Component {
                     placeholder="La quantitié voulue"
                     onChange={this.handleChange}
                   />
-                </Form.Group>,
-              )}
+                </Form.Group>
+              ))}
               <Form.Group widths="equal">
                 <Form.Button onClick={this.handleAddMed} primary>
                   Ajouter un médicament
                 </Form.Button>
-                {this.state.medicCount !== 1 &&
+                {this.state.medicCount !== 1 && (
                   <Form.Button onClick={this.handleRmMed} primary>
                     Supprimer un médicament
-                  </Form.Button>}
+                  </Form.Button>
+                )}
               </Form.Group>
-            </div>}
-          {data.message &&
+            </div>
+          )}
+          {data.message && (
             <Form.TextArea
               name="Message"
               label={data.message.titre}
               placeholder={data.message.aide}
               onChange={this.handleChange}
-            />}
+            />
+          )}
           <Form.Checkbox
             name="Newsletter"
             label="Je souhaite recevoir des nouvelles de la MMSG"
