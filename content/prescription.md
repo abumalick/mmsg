@@ -23,15 +23,15 @@ form:
     - Le patient doit venir chercher la prescription lui-même à l'acceuil de la
     Maison Médicale.
   medecin:
-    aide: Choisissez votre médecin
+    aide: Choisissez votre généraliste
     liste:
-      - Dr. Zekhnini Mohammed
-      - Dr. Washiwapa Rachel
-      - Dr. Sonkoue Sylvie
-      - Dr. Fekih Ahmed Mohamed
-      - Dr. Sheta Abderraouf
-      - Dr. El Mrabti Mohamed
-      - El Khabbabi Karima
+      - Dr. ZEKHNINI Mohammed
+      - Dr. WASHIWAPA Rachel
+      - Dr. EL HAJJAMI Fatiha
+      - Dr. KEPNANG Cyrille
+      - Dr. RAMADAN Soubhi
+      - Dr. CAPRONT Emilia
+      - Autre
     obligatoire: 1
     titre: Médecin
   medicament:

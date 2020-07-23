@@ -28,7 +28,7 @@ form:
       - Dr. CAPRONT Emilia
       - Autre
     obligatoire: 1
-    titre: Spécialiste
+    titre: Médecin
   message:
     aide: Un éventuel message
     titre: Notes (facultatif)
