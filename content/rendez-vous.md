@@ -25,7 +25,6 @@ form:
       - Dr. EL HAJJAMI Fatiha
       - Dr. KEPNANG Cyrille
       - Dr. RAMADAN Soubhi
-      - Dr. CAPRONT Emilia
       - Autre
     obligatoire: 1
     titre: Médecin
