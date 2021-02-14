@@ -1,0 +1,315 @@
+backend:
+  name: github
+  repo: asbab/mmsg # replace by your repo
+  branch: master # replace if you want netlify-cms publish on a different branch
+
+media_folder: "content/assets"
+public_folder: "/assets" # the same as your phenomic.source in your package.json
+
+
+collections:
+  - name: "nouveautes"
+    label: "Nouveautés"
+    folder: "content/nouveautes"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    filter:
+      field: layout
+      value: 'Nouveaute'
+    fields:
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Date de publication", name: "date", widget: "datetime"}
+      - {label: "Texte", name: "text", widget: "markdown"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "Nouveaute"}
+  - name: "services"
+    label: "Services"
+    folder: "content/services"
+    create: false
+    slug: "{{slug}}"
+    order: ordre
+    filter:
+      field: layout
+      value: 'Service'
+    fields:
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Ordre", name: "ordre", widget: "number"}
+      - {label: "Texte", name: "body", widget: "markdown"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "Service"}
+      - {label: "Icone", name: "icon", widget: "hidden"}
+  - name: "pages"
+    label: "Pages"
+    editor:
+      preview: false
+    files:
+      - name: "prescription"
+        label: "Prescription"
+        file: "content/prescription.md"
+        description: "Page prescription du site"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "Formulaire"}
+          - {label: "Titre de la page", name: "title", widget: "string"}
+          - {label: "Description de la page", name: "description", widget: "string"}
+          - {label: "Titre affiché", name: "titre", widget: "string"}
+          - {label: "Texte sous le titre", name: "body", widget: "markdown"}
+          - label: "Formulaire de prise de prescription"
+            name: form
+            widget: object
+            fields:
+              - {label: "Titre du formulaire", name: title, widget: string}
+              - {label: "Description du formulaire", name: description, widget: markdown}
+              - label: "Bloc téléphone"
+                name: telephone
+                widget: object
+                fields:
+                  - {label: "Titre du bloc téléphone", name: titre, widget: string}
+                  - {label: "Aide du bloc téléphone", name: aide, widget: string}
+              - label: "Bloc date de naissance"
+                name: naissance
+                widget: object
+                fields:
+                  - {label: "Titre du bloc téléphone", name: titre, widget: string}
+                  - {label: "Aide du bloc téléphone", name: aide, widget: string}
+              - label: "Bloc Médecins"
+                name: medecin
+                widget: object
+                fields:
+                  - {label: "Titre du bloc Médecins", name: titre, widget: string}
+                  - {label: "Aide du bloc Médecins", name: aide, widget: string}
+                  - {label: "liste des Médecins", name: liste, widget: list}
+              - label: "Bloc Médicament"
+                name: medicament
+                widget: object
+                fields:
+                  - {label: "Titre du bloc Médicament", name: titre, widget: string}
+                  - {label: "Aide du bloc Médicament", name: aide, widget: string}
+              - label: "Bloc message"
+                name: message
+                widget: object
+                fields:
+                  - {label: "Titre du bloc message", name: titre, widget: string}
+                  - {label: "Aide du bloc message", name: aide, widget: string}
+      - name: "rendez-vous"
+        label: "Rendez-vous"
+        file: "content/rendez-vous.md"
+        description: "Page Rendez-vous du site"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "Formulaire"}
+          - {label: "Titre de la page", name: "title", widget: "string"}
+          - {label: "Description de la page", name: "description", widget: "string"}
+          - {label: "Titre affiché", name: "titre", widget: "string"}
+          - {label: "Texte sous le titre", name: "body", widget: "markdown"}
+          - label: "Formulaire de prise de rendez-vous"
+            name: form
+            widget: object
+            fields:
+              - {label: "Titre du formulaire", name: title, widget: string}
+              - {label: "Description du formulaire", name: description, widget: string}
+              - label: "Bloc téléphone"
+                name: telephone
+                widget: object
+                fields:
+                  - {label: "Titre du bloc téléphone", name: titre, widget: string}
+                  - {label: "Aide du bloc téléphone", name: aide, widget: string}
+              - label: "Bloc Médecins"
+                name: medecin
+                widget: object
+                fields:
+                  - {label: "Titre du bloc Médecins", name: titre, widget: string}
+                  - {label: "Aide du bloc Médecins", name: aide, widget: string}
+                  - {label: "liste des Médecins", name: liste, widget: list}
+              - label: "Bloc Date"
+                name: date
+                widget: object
+                fields:
+                  - {label: "Titre du bloc Date", name: titre, widget: string}
+                  - {label: "Aide du bloc Date", name: aide, widget: string}
+              - label: "Bloc message"
+                name: message
+                widget: object
+                fields:
+                  - {label: "Titre du bloc message", name: titre, widget: string}
+                  - {label: "Aide du bloc message", name: aide, widget: string}
+      - name: "contact"
+        label: "Contact"
+        file: "content/contact.md"
+        description: "Page Contact du site"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "Contact"}
+          - {label: "Titre de la page", name: "title", widget: "string"}
+          - {label: "Description de la page", name: "description", widget: "string"}
+          - {label: "Titre du bloc Contact", name: "titre", widget: "string"}
+          - {label: "Description du bloc Contact", name: "body", widget: "markdown"}
+          - label: "Formulaire de contact"
+            name: form
+            widget: object
+            fields:
+              - {label: "Titre du formulaire de contact", name: title, widget: string}
+              - label: "Bloc message"
+                name: message
+                widget: object
+                fields:
+                  - {label: "Titre du bloc message", name: titre, widget: string}
+                  - {label: "Aide du bloc message", name: aide, widget: string}
+      - name: "services"
+        label: "Accueil des services"
+        file: "content/services/index.md"
+        description: "Page d'accueil des services du site"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "services"}
+          - {label: "Titre de la page", name: "title", widget: "string"}
+          - {label: "Description de la page", name: "description", widget: "string"}
+          - {label: "Titre affiché", name: "titre", widget: "string"}
+      - name: "fonctionnement"
+        label: "Fonctionnement"
+        file: "content/fonctionnement.md"
+        description: "Page 'fonctionnement du site'"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "Fonctionnement"}
+          - {label: "Titre de la page", name: "title", widget: "string"}
+          - {label: "Description de la page", name: "description", widget: "string"}
+          - {label: "Titre affiché", name: "titre", widget: "string"}
+          - {label: "Titre du bloc Q&R", name: "titreFaq", widget: "string"}
+          - label: "Q&R"
+            name: "faq"
+            widget: "object"
+            fields:
+              - label: Question 1
+                name: q1
+                widget: object
+                fields:
+                  - {label: "Titre", name: title, widget: string}
+                  - {label: "Réponse", name: content, widget: markdown}
+              - label: Question 2
+                name: q2
+                widget: object
+                fields:
+                  - {label: "Titre", name: title, widget: string}
+                  - {label: "Réponse", name: content, widget: markdown}
+              - label: Question 3
+                name: q3
+                widget: object
+                fields:
+                  - {label: "Titre", name: title, widget: string}
+                  - {label: "Réponse", name: content, widget: markdown}
+              - label: Question 4
+                name: q4
+                widget: object
+                fields:
+                  - {label: "Titre", name: title, widget: string}
+                  - {label: "Réponse", name: content, widget: markdown}
+              - label: Question 5
+                name: q5
+                widget: object
+                fields:
+                  - {label: "Titre", name: title, widget: string}
+                  - {label: "Réponse", name: content, widget: markdown}
+          - label: "Formulaire de contact"
+            name: form
+            widget: object
+            fields:
+              - {label: "Titre du formulaire de contact", name: title, widget: string}
+              - label: "Bloc message"
+                name: message
+                widget: object
+                fields:
+                  - {label: "Titre du bloc message", name: titre, widget: string}
+                  - {label: "Aide du bloc message", name: aide, widget: string}
+      - name: "horaires"
+        label: "Horaires"
+        file: "content/horaires.md"
+        description: "Page d'horaires du site'"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "Horaires"}
+          - {label: "Titre de la page", name: "title", widget: "string"}
+          - {label: "Description de la page", name: "description", widget: "string"}
+          - {label: "Titre affiché", name: "titre", widget: "string"}
+          - {label: "Texte en dessous des horaires", name: "apres-horaires", widget: "markdown"}
+          - {label: "Contenu de la page", name: "body", widget: "markdown"}
+      - name: "nouveautes"
+        label: "Page des Nouveautés"
+        file: "content/nouveautes/index.md"
+        description: "Page des nouveautés"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "Nouveautes"}
+          - {label: "Titre de la page", name: "title", widget: "string"}
+          - {label: "Description de la page", name: "description", widget: "string"}
+      - name: "accueil"
+        label: "Accueil"
+        file: "content/index.md"
+        description: "Page d'accueil du site'"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "Homepage"}
+          - {label: "Titre de la page", name: "title", widget: "string"}
+          - {label: "Description de la page", name: "description", widget: "string"}
+          - {label: "Titre du bloc de présentation", name: "titre", widget: "markdown"}
+          - {label: "Texte du bloc de présentation", name: "body", widget: "markdown"}
+  - name: "parametres"
+    label: "Paramètres"
+    editor:
+      preview: false
+    files:
+      - name: "general"
+        label: "Général | Attention !"
+        file: "info.yml"
+        description: "Paramètres générales du site"
+        fields:
+          - {label: "Titre du site", name: "nomdusite", widget: "string"}
+          - {label: "Teléphone", name: "tel", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Adresse", name: "adresse", widget: "markdown"}
+          - {label: "Lien google map", name: "carte", widget: "string"}
+          - {label: "License", name: "license", widget: "markdown"}
+          - label: "Blocs de pied de page et barre latérale"
+            name: blocs
+            widget: object
+            fields:
+              - label: "Bloc horaires"
+                name: horaires
+                widget: object
+                fields:
+                  - {label: "Titre du bloc", name: titre, widget: string}
+                  - {label: "Icône du bloc", name: icone, widget: string}
+                  - {label: "Texte du bloc", name: texte, widget: markdown}
+                  - {label: "Texte du Lien", name: lien, widget: string}
+              - label: "Bloc contact"
+                name: contact
+                widget: object
+                fields:
+                  - {label: "Titre du bloc", name: titre, widget: string}
+                  - {label: "Icône du bloc", name: icone, widget: string}
+                  - {label: "Texte du bloc", name: texte, widget: markdown}
+                  - {label: "Texte du Lien", name: lien, widget: string}
+              - label: "Bloc rendez-vous"
+                name: rendez-vous
+                widget: object
+                fields:
+                  - {label: "Titre du bloc", name: titre, widget: string}
+                  - {label: "Icône du bloc", name: icone, widget: string}
+                  - {label: "Texte du bloc", name: texte, widget: markdown}
+                  - {label: "Texte du Lien", name: lien, widget: string}
+              - label: "Bloc prescription"
+                name: prescription
+                widget: object
+                fields:
+                  - {label: "Titre du bloc", name: titre, widget: string}
+                  - {label: "Icône du bloc", name: icone, widget: string}
+                  - {label: "Texte du bloc", name: texte, widget: markdown}
+                  - {label: "Texte du Lien", name: lien, widget: string}
+          - {label: "Blocs de la barre latérale", name: barrelaterale, widget: list}
+          - {label: "Blocs de la page d'accueil", name: blocksaccueil, widget: list}
+          - {label: "Blocs du pied de page", name: pieddepage, widget: list}
+  - name: "services"
+    label: "Services"
+    folder: "content/services"
+    create: false
+    slug: "{{slug}}"
+    order: ordre
+    filter:
+      field: layout
+      value: 'Service'
+    fields:
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Ordre", name: "ordre", widget: "number"}
+      - {label: "Texte", name: "body", widget: "markdown"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "Service"}
+      - {label: "Icone", name: "icon", widget: "hidden"}
